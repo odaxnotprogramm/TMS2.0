@@ -62,7 +62,7 @@ public class CoinsServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
-        coinList.deleteCoinById(id);
+        CoinBase.deleteCoinById(id);
         String res = String.valueOf(id);
         ServletOutputStream outputStream = resp.getOutputStream();
         outputStream.println(id);
